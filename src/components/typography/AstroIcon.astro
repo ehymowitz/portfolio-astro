@@ -1,0 +1,29 @@
+---
+import { Icon } from "astro-icon";
+
+type IconNames =
+  | "mdi:instagram"
+  | "mdi:spotify"
+  | "mdi:github"
+  | "mdi:email"
+  | "mdi:linkedin";
+
+interface Props {
+  name: IconNames;
+}
+
+const { name } = Astro.props;
+
+const baseStyle =
+  "w-7 rounded transition-all ease-in-out duration-700 hover:opacity-80";
+
+const colorStyle: { [key in IconNames]: string } = {
+  "mdi:instagram": `${baseStyle} hover:text-red-400`,
+  "mdi:spotify": `${baseStyle} hover:text-green-800`,
+  "mdi:linkedin": `${baseStyle} hover:text-blue-600`,
+  "mdi:github": `${baseStyle} hover:text-stone-900`,
+  "mdi:email": `${baseStyle} hover:text-amber-700`,
+};
+---
+
+<Icon name={name} class={colorStyle[name]} />

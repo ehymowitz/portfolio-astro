@@ -1,5 +1,11 @@
 ---
-interface NavMenuProps {
+import AstroIcon from "../typography/AstroIcon.astro";
+import ExternalLink from "../typography/ExternalLink.astro";
+import PrimaryTitle from "../typography/PrimaryTitle.astro";
+import ScrollLink from "../typography/ScrollLink.astro";
+import MenuList from "./MenuList.astro";
+
+interface Props {
   className: string;
 }
 
@@ -7,18 +13,37 @@ const { className } = Astro.props;
 ---
 
 <div class={className}>
-  <nav class="sticky top-0 pt-10 w-full flex flex-cols justify-between">
-    <h2>EH</h2>
-    <ul class="grid grid-cols-5">
-      <a href="#me" class="flex justify-center">Me</a>
-      <p class="flex justify-center">|</p>
-      <a href="#music" class="flex justify-center">Music</a>
-      <p class="flex justify-center">|</p>
-      <a href="#code" class="flex justify-center">Code</a>
-    </ul>
+  <nav class="sticky top-0 pt-10 flex flex-cols justify-between">
+    <PrimaryTitle>EH</PrimaryTitle>
+    <MenuList>
+      <ScrollLink link="#me">Me</ScrollLink>
+      <p>|</p>
+      <ScrollLink link="#music">Music</ScrollLink>
+      <p>|</p>
+      <ScrollLink link="#code">Code</ScrollLink>
+    </MenuList>
   </nav>
   <slot />
-  <footer class="sticky bottom-0 pb-10 w-full flex flex-cols justify-between">
-    <a>CV</a>
+  <footer class="sticky bottom-0 pb-10 flex flex-cols justify-between">
+    <ExternalLink link="/Elie%20Hymowitz_CV.pdf">CV</ExternalLink>
+    <MenuList>
+      <ExternalLink link="https://www.instagram.com/elie.s.h/">
+        <AstroIcon name="mdi:instagram" />
+      </ExternalLink>
+      <ExternalLink
+        link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
+      >
+        <AstroIcon name="mdi:spotify" />
+      </ExternalLink>
+      <ExternalLink link="https://www.linkedin.com/in/eliehymowitz/">
+        <AstroIcon name="mdi:linkedin" />
+      </ExternalLink>
+      <ExternalLink link="https://github.com/ehymowitz">
+        <AstroIcon name="mdi:github" />
+      </ExternalLink>
+      <ExternalLink link="mailto:ehymowitz@gmail.com">
+        <AstroIcon name="mdi:email" />
+      </ExternalLink>
+    </MenuList>
   </footer>
 </div>

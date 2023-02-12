@@ -1,5 +1,7 @@
 ---
 import ScrollSection from "../components/containers/ScrollSection.astro";
+import PrimaryTitle from "../components/typography/PrimaryTitle.astro";
+import SecondaryTitle from "../components/typography/SecondaryTitle.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -7,16 +9,18 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <ScrollSection id="me">
       <div>
-        <h1>Hi, I'm Elie</h1>
-        <h2>I'm a web and app developer. I also play music</h2>
-        <h2>Born in Seattle, living in Montreal</h2>
+        <PrimaryTitle>Hi, I'm Elie</PrimaryTitle>
+        <SecondaryTitle>
+          I'm a web and app developer. I also play music
+        </SecondaryTitle>
+        <SecondaryTitle>Born in Seattle, living in Montreal</SecondaryTitle>
       </div>
     </ScrollSection>
     <ScrollSection id="music">
-      <h1>Music Videos I'm In</h1>
+      <PrimaryTitle>Music Videos I'm In</PrimaryTitle>
     </ScrollSection>
     <ScrollSection id="code">
-      <h1>Coding Projects</h1>
+      <PrimaryTitle>Coding Projects</PrimaryTitle>
     </ScrollSection>
   </main>
 </Layout>
