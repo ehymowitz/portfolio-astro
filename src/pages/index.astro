@@ -1,9 +1,11 @@
 ---
+import HorizontalScroll from "../components/containers/HorizontalScroll.astro";
 import ScrollSection from "../components/containers/ScrollSection.astro";
 import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
 import ItemTitle from "../components/typography/ItemTitle.astro";
 import TitlePrimary from "../components/typography/TitlePrimary.astro";
 import TitleSecondary from "../components/typography/TitleSecondary.astro";
+import musicVideos from "../data/musicVideos";
 import upcomingShows from "../data/upcomingShows";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -37,7 +39,12 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </ScrollSection>
     <ScrollSection id="music">
-      <TitlePrimary>Music Videos I'm In</TitlePrimary>
+      <div class="w-full">
+        <TitlePrimary>Music Videos I'm In</TitlePrimary>
+        <HorizontalScroll elements={musicVideos}>
+          <p>This Will Be Youtube Card</p>
+        </HorizontalScroll>
+      </div>
     </ScrollSection>
     <ScrollSection id="code">
       <TitlePrimary>Coding Projects</TitlePrimary>
