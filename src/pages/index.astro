@@ -1,26 +1,46 @@
 ---
 import ScrollSection from "../components/containers/ScrollSection.astro";
-import PrimaryTitle from "../components/typography/PrimaryTitle.astro";
-import SecondaryTitle from "../components/typography/SecondaryTitle.astro";
+import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
+import ItemTitle from "../components/typography/ItemTitle.astro";
+import TitlePrimary from "../components/typography/TitlePrimary.astro";
+import TitleSecondary from "../components/typography/TitleSecondary.astro";
+import upcomingShows from "../data/upcomingShows";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Elie Hymowitz">
   <main>
     <ScrollSection id="me">
-      <div>
-        <PrimaryTitle>Hi, I'm Elie</PrimaryTitle>
-        <SecondaryTitle>
-          I'm a web and app developer. I also play music
-        </SecondaryTitle>
-        <SecondaryTitle>Born in Seattle, living in Montreal</SecondaryTitle>
+      <div class="w-full flex justify-between">
+        <div>
+          <TitlePrimary>Hi, I'm Elie</TitlePrimary>
+          <TitleSecondary>
+            I'm a web and app developer. I also play music
+          </TitleSecondary>
+          <TitleSecondary>Born in Seattle, living in Montreal</TitleSecondary>
+        </div>
+        <div>
+          <ul class="flex flex-col text-right">
+            {upcomingShows.length > 0 && <ItemTitle>Upcoming Shows</ItemTitle>}
+            {
+              upcomingShows.map((show) => (
+                <li>
+                  <ItemTitle>{show.date}</ItemTitle>
+                  <ItemSubtitle>
+                    {show.location} with {show.band}
+                  </ItemSubtitle>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </ScrollSection>
     <ScrollSection id="music">
-      <PrimaryTitle>Music Videos I'm In</PrimaryTitle>
+      <TitlePrimary>Music Videos I'm In</TitlePrimary>
     </ScrollSection>
     <ScrollSection id="code">
-      <PrimaryTitle>Coding Projects</PrimaryTitle>
+      <TitlePrimary>Coding Projects</TitlePrimary>
     </ScrollSection>
   </main>
 </Layout>

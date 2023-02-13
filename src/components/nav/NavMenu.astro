@@ -1,8 +1,8 @@
 ---
 import AstroIcon from "../typography/AstroIcon.astro";
-import ExternalLink from "../typography/ExternalLink.astro";
-import PrimaryTitle from "../typography/PrimaryTitle.astro";
-import ScrollLink from "../typography/ScrollLink.astro";
+import LinkExternal from "../typography/LinkExternal.astro";
+import TitlePrimary from "../typography/TitlePrimary.astro";
+import LinkScroll from "../typography/LinkScroll.astro";
 import MenuList from "./MenuList.astro";
 
 interface Props {
@@ -14,36 +14,36 @@ const { className } = Astro.props;
 
 <div class={className}>
   <nav class="sticky top-0 pt-10 flex flex-cols justify-between">
-    <PrimaryTitle>EH</PrimaryTitle>
+    <TitlePrimary>EH</TitlePrimary>
     <MenuList>
-      <ScrollLink link="#me">Me</ScrollLink>
+      <LinkScroll link="#me">Me</LinkScroll>
       <p>|</p>
-      <ScrollLink link="#music">Music</ScrollLink>
+      <LinkScroll link="#music">Music</LinkScroll>
       <p>|</p>
-      <ScrollLink link="#code">Code</ScrollLink>
+      <LinkScroll link="#code">Code</LinkScroll>
     </MenuList>
   </nav>
   <slot />
   <footer class="sticky bottom-0 pb-10 flex flex-cols justify-between">
-    <ExternalLink link="/Elie%20Hymowitz_CV.pdf">CV</ExternalLink>
+    <LinkExternal link="/Elie%20Hymowitz_CV.pdf">CV</LinkExternal>
     <MenuList>
-      <ExternalLink link="https://www.instagram.com/elie.s.h/">
+      <LinkExternal link="https://www.instagram.com/elie.s.h/">
         <AstroIcon name="mdi:instagram" />
-      </ExternalLink>
-      <ExternalLink
+      </LinkExternal>
+      <LinkExternal
         link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
       >
         <AstroIcon name="mdi:spotify" />
-      </ExternalLink>
-      <ExternalLink link="https://www.linkedin.com/in/eliehymowitz/">
+      </LinkExternal>
+      <LinkExternal link="https://www.linkedin.com/in/eliehymowitz/">
         <AstroIcon name="mdi:linkedin" />
-      </ExternalLink>
-      <ExternalLink link="https://github.com/ehymowitz">
+      </LinkExternal>
+      <LinkExternal link="https://github.com/ehymowitz">
         <AstroIcon name="mdi:github" />
-      </ExternalLink>
-      <ExternalLink link="mailto:ehymowitz@gmail.com">
+      </LinkExternal>
+      <LinkExternal link="mailto:ehymowitz@gmail.com">
         <AstroIcon name="mdi:email" />
-      </ExternalLink>
+      </LinkExternal>
     </MenuList>
   </footer>
 </div>
