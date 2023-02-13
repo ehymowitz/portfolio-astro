@@ -1,12 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-
-type IconNames =
-  | "mdi:instagram"
-  | "mdi:spotify"
-  | "mdi:github"
-  | "mdi:email"
-  | "mdi:linkedin";
+import type { IconNames } from "../../types";
 
 interface Props {
   name: IconNames;
@@ -22,6 +16,13 @@ const colorStyle: { [key in IconNames]: string } = {
   "mdi:linkedin": `${baseStyle} hover:text-blue-600`,
   "mdi:github": `${baseStyle} hover:text-stone-900`,
   "mdi:email": `${baseStyle} hover:text-amber-700`,
+  "simple-icons:mongodb": `${baseStyle} hover:text-amber-700`,
+  "simple-icons:astro": `${baseStyle} hover:text-amber-700`,
+  "mdi:tailwind": `${baseStyle} hover:text-amber-700`,
+  "teenyicons:netlify-outline": `${baseStyle} hover:text-amber-700`,
+  "teenyicons:nextjs-solid": `${baseStyle} hover:text-amber-700`,
+  "mdi:sass": `${baseStyle} hover:text-amber-700`,
+  "ion:logo-vercel": `${baseStyle} hover:text-amber-700`,
 };
 ---
 

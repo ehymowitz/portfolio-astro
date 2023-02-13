@@ -1,6 +1,9 @@
 ---
+// @ts-ignore
 import { YouTube } from "@astro-community/astro-embed-youtube";
+import { Image } from "@astrojs/image/components";
 import HorizontalScroll from "../components/containers/HorizontalScroll.astro";
+import HorizontalScrollCard from "../components/containers/HorizontalScrollCard.astro";
 import ScrollSection from "../components/containers/ScrollSection.astro";
 import AstroIcon from "../components/typography/AstroIcon.astro";
 import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
@@ -9,6 +12,7 @@ import LinkExternal from "../components/typography/LinkExternal.astro";
 import SectionText from "../components/typography/SectionText.astro";
 import TitlePrimary from "../components/typography/TitlePrimary.astro";
 import TitleSecondary from "../components/typography/TitleSecondary.astro";
+import codingProjects from "../data/codingProjects";
 import musicVideos from "../data/musicVideos";
 import upcomingShows from "../data/upcomingShows";
 import Layout from "../layouts/Layout.astro";
@@ -61,19 +65,51 @@ import Layout from "../layouts/Layout.astro";
         <HorizontalScroll>
           {
             musicVideos.map((video) => (
-              <li class="text-center w-96 my-5 transition-all duration-500 hover:w-112">
+              <HorizontalScrollCard>
                 <YouTube id={video.link} />
                 <div class="w-full border-t border-black my-2" />
                 <ItemTitle>{video.subTitle}</ItemTitle>
                 <ItemSubtitle>{video.title}</ItemSubtitle>
-              </li>
+              </HorizontalScrollCard>
             ))
           }
         </HorizontalScroll>
       </div>
     </ScrollSection>
     <ScrollSection id="code">
-      <TitlePrimary>Coding Projects</TitlePrimary>
+      <div class="w-full">
+        <TitlePrimary>Coding Projects</TitlePrimary>
+        <span class="flex">
+          <LinkExternal link="https://www.linkedin.com/in/eliehymowitz/">
+            <AstroIcon name="mdi:linkedin" />
+          </LinkExternal>
+          <SectionText>To reach me in a professional setting</SectionText>
+          <div class="mr-5"></div>
+          <LinkExternal link="https://github.com/ehymowitz">
+            <AstroIcon name="mdi:github" />
+          </LinkExternal>
+          <SectionText>To see projects in progress</SectionText>
+        </span>
+        <HorizontalScroll>
+          {
+            codingProjects.map((project) => (
+              <HorizontalScrollCard>
+                <span class="grid gap-x-5 grid-flow-col auto-cols-max justify-center py-5">
+                  {project.stackLogos.map((logo) => (
+                    <AstroIcon name={logo} />
+                  ))}
+                </span>
+
+                <LinkExternal link={project.link}>
+                  <Image alt={project.title} src={import(project.image)} />
+                </LinkExternal>
+                <ItemTitle>{project.title}</ItemTitle>
+                <ItemSubtitle>{project.subTitle}</ItemSubtitle>
+              </HorizontalScrollCard>
+            ))
+          }
+        </HorizontalScroll>
+      </div>
     </ScrollSection>
   </main>
 </Layout>
