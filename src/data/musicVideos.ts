@@ -22,7 +22,7 @@ const musicVideos: MusicVideo[] = [
   },
   {
     link: "https://www.youtube.com/embed/_484oLelz3k",
-    title: "Lover So Soft (Kelly Clarkson Cover)",
+    title: "Love So Soft (Kelly Clarkson Cover)",
     subTitle: "Ishana and Friends",
   },
   {

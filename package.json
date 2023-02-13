@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astro-community/astro-embed-youtube": "^0.2.2",
     "@astrojs/tailwind": "^3.0.1",
     "@fontsource/commissioner": "^4.5.10",
     "@fontsource/fraunces": "^4.5.11",

@@ -1,28 +1,3 @@
----
-import ItemTitle from "../typography/ItemTitle.astro";
-import ItemSubtitle from "../typography/ItemSubtitle.astro";
-
-interface HorizontalScrollable {
-  link: string;
-  title: string;
-  subTitle: string;
-}
-
-interface Props {
-  elements: HorizontalScrollable[];
-}
-
-const { elements } = Astro.props;
----
-
 <ul class="grid gap-x-10 grid-flow-col auto-cols-max overflow-x-scroll">
-  {
-    elements.map((element) => (
-      <li class="text-center">
-        <slot />
-        <ItemTitle>{element.subTitle}</ItemTitle>
-        <ItemSubtitle>{element.title}</ItemSubtitle>
-      </li>
-    ))
-  }
+  <slot />
 </ul>

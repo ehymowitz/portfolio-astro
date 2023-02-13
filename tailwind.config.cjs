@@ -8,8 +8,8 @@ module.exports = {
         primary: ["Fraunces"],
         secondary: ["Commissioner"],
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      spacing: {
+        112: "28rem",
       },
     },
   },

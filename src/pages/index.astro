@@ -1,8 +1,12 @@
 ---
+import { YouTube } from "@astro-community/astro-embed-youtube";
 import HorizontalScroll from "../components/containers/HorizontalScroll.astro";
 import ScrollSection from "../components/containers/ScrollSection.astro";
+import AstroIcon from "../components/typography/AstroIcon.astro";
 import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
 import ItemTitle from "../components/typography/ItemTitle.astro";
+import LinkExternal from "../components/typography/LinkExternal.astro";
+import SectionText from "../components/typography/SectionText.astro";
 import TitlePrimary from "../components/typography/TitlePrimary.astro";
 import TitleSecondary from "../components/typography/TitleSecondary.astro";
 import musicVideos from "../data/musicVideos";
@@ -41,8 +45,30 @@ import Layout from "../layouts/Layout.astro";
     <ScrollSection id="music">
       <div class="w-full">
         <TitlePrimary>Music Videos I'm In</TitlePrimary>
-        <HorizontalScroll elements={musicVideos}>
-          <p>This Will Be Youtube Card</p>
+        <span class="flex">
+          <LinkExternal link="https://www.instagram.com/elie.s.h/">
+            <AstroIcon name="mdi:instagram" />
+          </LinkExternal>
+          <SectionText>For more of what I'm up to</SectionText>
+          <div class="mr-5"></div>
+          <LinkExternal
+            link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
+          >
+            <AstroIcon name="mdi:spotify" />
+          </LinkExternal>
+          <SectionText>For more songs I've played</SectionText>
+        </span>
+        <HorizontalScroll>
+          {
+            musicVideos.map((video) => (
+              <li class="text-center w-96 my-5 transition-all duration-500 hover:w-112">
+                <YouTube id={video.link} />
+                <div class="w-full border-t border-black my-2" />
+                <ItemTitle>{video.subTitle}</ItemTitle>
+                <ItemSubtitle>{video.title}</ItemSubtitle>
+              </li>
+            ))
+          }
         </HorizontalScroll>
       </div>
     </ScrollSection>

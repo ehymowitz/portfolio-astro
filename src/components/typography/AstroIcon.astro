@@ -14,8 +14,7 @@ interface Props {
 
 const { name } = Astro.props;
 
-const baseStyle =
-  "w-7 rounded transition-all ease-in-out duration-700 hover:opacity-80";
+const baseStyle = "w-7 mr-2 transition-all duration-500 hover:opacity-80";
 
 const colorStyle: { [key in IconNames]: string } = {
   "mdi:instagram": `${baseStyle} hover:text-red-400`,
