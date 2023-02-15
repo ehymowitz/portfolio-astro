@@ -11,6 +11,14 @@ interface CodingProject {
 
 const codingProjects: CodingProject[] = [
   {
+    image: "../projectImages/alarmSharer.png",
+    stackLogos: ["expo", "firebase", "tailwind", "vercel"],
+    title: "Alarm Sharer",
+    subTitle: "For uploading and sharing alarm clocks",
+    link: "https://alarm-sharer.vercel.app/",
+    github: "https://github.com/ehymowitz/alarm-sharer",
+  },
+  {
     image: "../projectImages/portfolio.png",
     stackLogos: ["astro", "tailwind", "netlify"],
     title: "This Very Website",
@@ -25,14 +33,6 @@ const codingProjects: CodingProject[] = [
     subTitle: "For creating and sharing music sets",
     link: "https://set-sharer.vercel.app/",
     github: "https://github.com/ehymowitz/set-sharer",
-  },
-  {
-    image: "../projectImages/alarmSharer.png",
-    stackLogos: ["expo", "firebase", "tailwind", "vercel"],
-    title: "Alarm Sharer",
-    subTitle: "For uploading and sharing alarm clocks",
-    link: "https://alarm-sharer.vercel.app/",
-    github: "https://github.com/ehymowitz/alarm-sharer",
   },
 ];
 

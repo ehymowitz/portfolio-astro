@@ -52,15 +52,15 @@ import Layout from "../layouts/Layout.astro";
         <span class="flex">
           <LinkExternal link="https://www.instagram.com/elie.s.h/">
             <AstroIcon icon={Icons.instagram} />
+            <SectionText>For more of what I'm up to</SectionText>
           </LinkExternal>
-          <SectionText>For more of what I'm up to</SectionText>
           <div class="mr-5"></div>
           <LinkExternal
             link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
           >
             <AstroIcon icon={Icons.spotify} />
+            <SectionText>For more songs I've played</SectionText>
           </LinkExternal>
-          <SectionText>For more songs I've played</SectionText>
         </span>
         <HorizontalScroll>
           {
@@ -78,17 +78,17 @@ import Layout from "../layouts/Layout.astro";
     </ScrollSection>
     <ScrollSection id="code">
       <div class="w-full">
-        <TitlePrimary>Coding Projects</TitlePrimary>
+        <TitlePrimary>Projects I Maintain</TitlePrimary>
         <span class="flex">
           <LinkExternal link="https://www.linkedin.com/in/eliehymowitz/">
             <AstroIcon icon={Icons.linkedin} />
+            <SectionText>To reach me in a professional setting</SectionText>
           </LinkExternal>
-          <SectionText>To reach me in a professional setting</SectionText>
           <div class="mr-5"></div>
           <LinkExternal link="https://github.com/ehymowitz">
             <AstroIcon icon={Icons.github} />
+            <SectionText>To see projects in progress</SectionText>
           </LinkExternal>
-          <SectionText>To see projects in progress</SectionText>
         </span>
         <HorizontalScroll>
           {
@@ -103,7 +103,7 @@ import Layout from "../layouts/Layout.astro";
                 <LinkExternal link={project.link}>
                   <Image alt={project.title} src={import(project.image)} />
                 </LinkExternal>
-                <div class="relative h-0">
+                <div class="relative h-2">
                   <div class="absolute top-px">
                     <LinkExternal link={project.github}>
                       <AstroIcon icon={Icons.github} />
