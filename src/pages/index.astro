@@ -103,6 +103,14 @@ import Layout from "../layouts/Layout.astro";
                 <LinkExternal link={project.link}>
                   <Image alt={project.title} src={import(project.image)} />
                 </LinkExternal>
+                <div class="relative h-0">
+                  <div class="absolute top-px">
+                    <LinkExternal link={project.github}>
+                      <AstroIcon icon={Icons.github} />
+                    </LinkExternal>
+                  </div>
+                </div>
+
                 <ItemTitle>{project.title}</ItemTitle>
                 <ItemSubtitle>{project.subTitle}</ItemSubtitle>
               </HorizontalScrollCard>
