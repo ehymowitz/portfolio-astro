@@ -13,7 +13,9 @@ const { className } = Astro.props;
 
 <div class={className}>
   <nav class="sticky top-0 pt-10 flex flex-cols justify-between">
-    <TitlePrimary>EH</TitlePrimary>
+    <LinkScroll link="#me">
+      <TitlePrimary>EH</TitlePrimary>
+    </LinkScroll>
     <ul class="grid gap-x-5 grid-flow-col auto-cols-max">
       <LinkScroll link="#me">Me</LinkScroll>
       <p>|</p>

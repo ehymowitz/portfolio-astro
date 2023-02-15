@@ -5,6 +5,7 @@ import { Image } from "@astrojs/image/components";
 import HorizontalScroll from "../components/containers/HorizontalScroll.astro";
 import HorizontalScrollCard from "../components/containers/HorizontalScrollCard.astro";
 import ScrollSection from "../components/containers/ScrollSection.astro";
+import Divider from "../components/divider.astro";
 import AstroIcon, { Icons } from "../components/typography/AstroIcon.astro";
 import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
 import ItemTitle from "../components/typography/ItemTitle.astro";
@@ -67,7 +68,7 @@ import Layout from "../layouts/Layout.astro";
             musicVideos.map((video) => (
               <HorizontalScrollCard>
                 <YouTube id={video.link} />
-                <div class="w-full border-t border-black my-2" />
+                <Divider />
                 <ItemTitle>{video.subTitle}</ItemTitle>
                 <ItemSubtitle>{video.title}</ItemSubtitle>
               </HorizontalScrollCard>
@@ -103,14 +104,14 @@ import Layout from "../layouts/Layout.astro";
                 <LinkExternal link={project.link}>
                   <Image alt={project.title} src={import(project.image)} />
                 </LinkExternal>
-                <div class="relative h-2">
-                  <div class="absolute top-px">
+                <Divider />
+                <div class="relative h-0">
+                  <div class="absolute">
                     <LinkExternal link={project.github}>
                       <AstroIcon icon={Icons.github} />
                     </LinkExternal>
                   </div>
                 </div>
-
                 <ItemTitle>{project.title}</ItemTitle>
                 <ItemSubtitle>{project.subTitle}</ItemSubtitle>
               </HorizontalScrollCard>
