@@ -1,9 +1,8 @@
 ---
-import AstroIcon from "../typography/AstroIcon.astro";
+import AstroIcon, { Icons } from "../typography/AstroIcon.astro";
 import LinkExternal from "../typography/LinkExternal.astro";
-import TitlePrimary from "../typography/TitlePrimary.astro";
 import LinkScroll from "../typography/LinkScroll.astro";
-import MenuList from "./MenuList.astro";
+import TitlePrimary from "../typography/TitlePrimary.astro";
 
 interface Props {
   className: string;
@@ -15,35 +14,35 @@ const { className } = Astro.props;
 <div class={className}>
   <nav class="sticky top-0 pt-10 flex flex-cols justify-between">
     <TitlePrimary>EH</TitlePrimary>
-    <MenuList>
+    <ul class="grid gap-x-5 grid-flow-col auto-cols-max">
       <LinkScroll link="#me">Me</LinkScroll>
       <p>|</p>
       <LinkScroll link="#music">Music</LinkScroll>
       <p>|</p>
       <LinkScroll link="#code">Code</LinkScroll>
-    </MenuList>
+    </ul>
   </nav>
   <slot />
   <footer class="sticky bottom-0 pb-10 flex flex-cols justify-between">
     <LinkExternal link="/Elie%20Hymowitz_CV.pdf">CV</LinkExternal>
-    <MenuList>
+    <ul class="grid gap-x-5 grid-flow-col auto-cols-max">
       <LinkExternal link="https://www.instagram.com/elie.s.h/">
-        <AstroIcon name="mdi:instagram" />
+        <AstroIcon icon={Icons.instagram} />
       </LinkExternal>
       <LinkExternal
         link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
       >
-        <AstroIcon name="mdi:spotify" />
+        <AstroIcon icon={Icons.spotify} />
       </LinkExternal>
       <LinkExternal link="https://www.linkedin.com/in/eliehymowitz/">
-        <AstroIcon name="mdi:linkedin" />
+        <AstroIcon icon={Icons.linkedin} />
       </LinkExternal>
       <LinkExternal link="https://github.com/ehymowitz">
-        <AstroIcon name="mdi:github" />
+        <AstroIcon icon={Icons.github} />
       </LinkExternal>
       <LinkExternal link="mailto:ehymowitz@gmail.com">
-        <AstroIcon name="mdi:email" />
+        <AstroIcon icon={Icons.email} />
       </LinkExternal>
-    </MenuList>
+    </ul>
   </footer>
 </div>

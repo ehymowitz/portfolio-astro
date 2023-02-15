@@ -1,8 +1,8 @@
-import type { IconNames } from "../types";
+import type { Icons } from "../components/typography/AstroIcon.astro";
 
 interface CodingProject {
   image: string;
-  stackLogos: IconNames[];
+  stackLogos: (keyof typeof Icons)[];
   title: string;
   subTitle: string;
   link: string;
@@ -11,23 +11,14 @@ interface CodingProject {
 const codingProjects: CodingProject[] = [
   {
     image: "../projectImages/portfolio.png",
-    stackLogos: [
-      "simple-icons:astro",
-      "mdi:tailwind",
-      "teenyicons:netlify-outline",
-    ],
+    stackLogos: ["astro", "tailwind", "netlify"],
     title: "This Very Website",
     subTitle: "Where I show off my powers",
     link: "#top",
   },
   {
     image: "../projectImages/setSharer.png",
-    stackLogos: [
-      "teenyicons:nextjs-solid",
-      "simple-icons:mongodb",
-      "mdi:sass",
-      "ion:logo-vercel",
-    ],
+    stackLogos: ["next", "mongo", "sass", "vercel"],
     title: "Set Sharer",
     subTitle: "For creating and sharing music sets",
     link: "https://set-sharer.vercel.app/",

@@ -1,29 +1,41 @@
 ---
 import { Icon } from "astro-icon";
-import type { IconNames } from "../../types";
 
 interface Props {
-  name: IconNames;
+  icon: { iconName: string; hoverColor: string };
 }
 
-const { name } = Astro.props;
+const { icon } = Astro.props;
 
-const baseStyle = "w-7 mr-2 transition-all duration-500 hover:opacity-80";
-
-const colorStyle: { [key in IconNames]: string } = {
-  "mdi:instagram": `${baseStyle} hover:text-red-400`,
-  "mdi:spotify": `${baseStyle} hover:text-green-800`,
-  "mdi:linkedin": `${baseStyle} hover:text-blue-600`,
-  "mdi:github": `${baseStyle} hover:text-stone-900`,
-  "mdi:email": `${baseStyle} hover:text-amber-700`,
-  "simple-icons:mongodb": `${baseStyle} hover:text-amber-700`,
-  "simple-icons:astro": `${baseStyle} hover:text-amber-700`,
-  "mdi:tailwind": `${baseStyle} hover:text-amber-700`,
-  "teenyicons:netlify-outline": `${baseStyle} hover:text-amber-700`,
-  "teenyicons:nextjs-solid": `${baseStyle} hover:text-amber-700`,
-  "mdi:sass": `${baseStyle} hover:text-amber-700`,
-  "ion:logo-vercel": `${baseStyle} hover:text-amber-700`,
+export const Icons = {
+  instagram: { iconName: "mdi:instagram", hoverColor: "hover:text-red-600" },
+  spotify: { iconName: "mdi:spotify", hoverColor: "hover:text-green-800" },
+  linkedin: { iconName: "mdi:linkedin", hoverColor: "hover:text-blue-600" },
+  github: { iconName: "mdi:github", hoverColor: "hover:text-stone-700" },
+  email: { iconName: "mdi:email", hoverColor: "hover:text-amber-700" },
+  mongo: {
+    iconName: "simple-icons:mongodb",
+    hoverColor: "hover:text-green-900",
+  },
+  astro: {
+    iconName: "simple-icons:astro",
+    hoverColor: "hover:text-fuchsia-700",
+  },
+  tailwind: { iconName: "mdi:tailwind", hoverColor: "hover:text-sky-500" },
+  netlify: {
+    iconName: "teenyicons:netlify-outline",
+    hoverColor: "hover:text-teal-600",
+  },
+  next: {
+    iconName: "teenyicons:nextjs-solid",
+    hoverColor: "hover:text-zinc-500",
+  },
+  sass: { iconName: "mdi:sass", hoverColor: "hover:text-pink-700" },
+  vercel: { iconName: "ion:logo-vercel", hoverColor: "hover:text-zinc-500" },
 };
 ---
 
-<Icon name={name} class={colorStyle[name]} />
+<Icon
+  name={icon.iconName}
+  class={`w-7 mr-2 transition-all duration-500 hover:pacity-80 ${icon.hoverColor}`}
+/>

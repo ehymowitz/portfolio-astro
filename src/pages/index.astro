@@ -5,7 +5,7 @@ import { Image } from "@astrojs/image/components";
 import HorizontalScroll from "../components/containers/HorizontalScroll.astro";
 import HorizontalScrollCard from "../components/containers/HorizontalScrollCard.astro";
 import ScrollSection from "../components/containers/ScrollSection.astro";
-import AstroIcon from "../components/typography/AstroIcon.astro";
+import AstroIcon, { Icons } from "../components/typography/AstroIcon.astro";
 import ItemSubtitle from "../components/typography/ItemSubtitle.astro";
 import ItemTitle from "../components/typography/ItemTitle.astro";
 import LinkExternal from "../components/typography/LinkExternal.astro";
@@ -51,14 +51,14 @@ import Layout from "../layouts/Layout.astro";
         <TitlePrimary>Music Videos I'm In</TitlePrimary>
         <span class="flex">
           <LinkExternal link="https://www.instagram.com/elie.s.h/">
-            <AstroIcon name="mdi:instagram" />
+            <AstroIcon icon={Icons.instagram} />
           </LinkExternal>
           <SectionText>For more of what I'm up to</SectionText>
           <div class="mr-5"></div>
           <LinkExternal
             link="https://open.spotify.com/playlist/2ieh5fIUHEdPw5dnwS2wcp?si=7537ffcfdb804ab6"
           >
-            <AstroIcon name="mdi:spotify" />
+            <AstroIcon icon={Icons.spotify} />
           </LinkExternal>
           <SectionText>For more songs I've played</SectionText>
         </span>
@@ -81,12 +81,12 @@ import Layout from "../layouts/Layout.astro";
         <TitlePrimary>Coding Projects</TitlePrimary>
         <span class="flex">
           <LinkExternal link="https://www.linkedin.com/in/eliehymowitz/">
-            <AstroIcon name="mdi:linkedin" />
+            <AstroIcon icon={Icons.linkedin} />
           </LinkExternal>
           <SectionText>To reach me in a professional setting</SectionText>
           <div class="mr-5"></div>
           <LinkExternal link="https://github.com/ehymowitz">
-            <AstroIcon name="mdi:github" />
+            <AstroIcon icon={Icons.github} />
           </LinkExternal>
           <SectionText>To see projects in progress</SectionText>
         </span>
@@ -96,7 +96,7 @@ import Layout from "../layouts/Layout.astro";
               <HorizontalScrollCard>
                 <span class="grid gap-x-5 grid-flow-col auto-cols-max justify-center py-5">
                   {project.stackLogos.map((logo) => (
-                    <AstroIcon name={logo} />
+                    <AstroIcon icon={Icons[logo as keyof typeof Icons]} />
                   ))}
                 </span>
 
