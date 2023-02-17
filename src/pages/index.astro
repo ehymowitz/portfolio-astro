@@ -22,24 +22,32 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Elie Hymowitz">
   <main>
     <ScrollSection id="me">
-      <div class="w-full flex justify-between">
-        <div>
+      <div
+        class="w-full flex flex-col sm:flex-row justify-center sm:justify-between"
+      >
+        <div
+          class="flex flex-col justify-center sm:w-1/2 text-center sm:text-left"
+        >
           <TitlePrimary>Hi, I'm Elie</TitlePrimary>
           <TitleSecondary>
             I'm a web and app developer. I also play music
           </TitleSecondary>
           <TitleSecondary>Born in Seattle, living in Montreal</TitleSecondary>
         </div>
-        <div>
-          <ul class="flex flex-col text-right">
-            {upcomingShows.length > 0 && <ItemTitle>Upcoming Shows</ItemTitle>}
+        <div class="mt-10 sm:w-1/2 text-center sm:text-right">
+          <ul class="flex flex-col justify-center">
+            {
+              upcomingShows.length > 0 && (
+                <h3 class="font-primary pb-2 text-lg">Upcoming Shows</h3>
+              )
+            }
             {
               upcomingShows.map((show) => (
                 <li>
-                  <ItemTitle>{show.date}</ItemTitle>
-                  <ItemSubtitle>
+                  <p class="font-primary">{show.date}</p>
+                  <p class="font-secondary">
                     {show.location} with {show.band}
-                  </ItemSubtitle>
+                  </p>
                 </li>
               ))
             }
