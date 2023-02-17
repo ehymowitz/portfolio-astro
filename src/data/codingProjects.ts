@@ -11,7 +11,7 @@ interface CodingProject {
 
 const codingProjects: CodingProject[] = [
   {
-    image: "../projectImages/alarmSharer.png",
+    image: "/assets/alarmSharer.png",
     stackLogos: ["expo", "firebase", "tailwind", "vercel"],
     title: "Alarm Sharer",
     subTitle: "For uploading and sharing alarm clocks",
@@ -19,7 +19,7 @@ const codingProjects: CodingProject[] = [
     github: "https://github.com/ehymowitz/alarm-sharer",
   },
   {
-    image: "../projectImages/portfolio.png",
+    image: "/assets/portfolio.png",
     stackLogos: ["astro", "tailwind", "netlify"],
     title: "This Very Website",
     subTitle: "Where I show off my powers",
@@ -27,7 +27,7 @@ const codingProjects: CodingProject[] = [
     github: "https://github.com/ehymowitz/portfolio",
   },
   {
-    image: "../projectImages/setSharer.png",
+    image: "/assets/setSharer.png",
     stackLogos: ["next", "mongo", "sass", "vercel"],
     title: "Set Sharer",
     subTitle: "For creating and sharing music sets",

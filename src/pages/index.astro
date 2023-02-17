@@ -110,7 +110,12 @@ import Layout from "../layouts/Layout.astro";
                 </span>
 
                 <LinkExternal link={project.link}>
-                  <Image alt={project.title} src={import(project.image)} />
+                  <Image
+                    alt={project.title}
+                    src={project.image}
+                    width={1024}
+                    height={576}
+                  />
                 </LinkExternal>
                 <Divider />
                 <div class="relative h-0">
