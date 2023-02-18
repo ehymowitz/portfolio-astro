@@ -24,7 +24,7 @@ const codingProjects: CodingProject[] = [
     title: "This Very Website",
     subTitle: "Where I show off my powers",
     link: "#top",
-    github: "https://github.com/ehymowitz/portfolio",
+    github: "https://github.com/ehymowitz/portfolio-astro",
   },
   {
     image: "/assets/setSharer.png",
