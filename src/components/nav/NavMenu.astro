@@ -25,7 +25,9 @@ const { className } = Astro.props;
     </ul>
   </nav>
   <slot />
-  <footer class="sticky bottom-0 pb-10 flex flex-cols justify-between">
+  <footer
+    class="sticky bottom-5 sm:bottom-0 pb-10 flex flex-cols justify-between"
+  >
     <LinkExternal link="/Elie%20Hymowitz_CV.pdf">CV</LinkExternal>
     <ul class="grid gap-x-3 sm:gap-x-5 grid-flow-col auto-cols-max">
       <LinkExternal link="https://www.instagram.com/elie.s.h/">
