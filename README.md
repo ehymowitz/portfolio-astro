@@ -7,7 +7,7 @@ Set-Sharer: A webapp for musicians to create and share setlists
 Porfolio: My site! You'll also find any music projects I've published on here   
 
 ## About Me
-I am a passionate web developer with 3+ years of experience in building responsive and user-friendly websites. I specialize in front-end development using React frameworks, and love to leverage PaSS software and online databases to create lean full stack apps for web and native. I'm always eager to learn and improve my skills, and I'm excited about the future of web development.
+I am a passionate web developer with 3+ years of experience in building responsive and user-friendly websites. I specialize in front-end development using React frameworks, and love to leverage PaaS software and online databases to create lean full stack apps for web and native. I'm always eager to learn and improve my skills, and I'm excited about the future of web development.
 
 ## Contact Me
 Email: ehymowitz@gmail.com
