@@ -11,6 +11,14 @@ interface CodingProject {
 
 const codingProjects: CodingProject[] = [
   {
+    image: "/assets/chainsprout.png",
+    stackLogos: ["next", "supabase", "tailwind", "vercel"],
+    title: "Chainsprout",
+    subTitle: "A (very) simplified version of linktree",
+    link: "https://chainsprout.vercel.app/",
+    github: "https://github.com/ehymowitz/chainsprout",
+  },
+  {
     image: "/assets/alarmSharer.png",
     stackLogos: ["expo", "firebase", "tailwind", "vercel"],
     title: "Alarm Sharer",
