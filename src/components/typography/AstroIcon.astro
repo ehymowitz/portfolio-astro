@@ -41,10 +41,18 @@ export const Icons = {
     iconName: "simple-icons:supabase",
     hoverColor: "hover:text-green-500",
   },
+  calendly: {
+    iconName: "mdi:calendar",
+    hoverColor: "hover:text-[#006BFF]",
+  },
+  paper: {
+    iconName: "mdi:note-outline",
+    hoverColor: "hover:text-gray-600",
+  },
 };
 ---
 
 <Icon
   name={icon.iconName}
-  class={`w-7 mr-2 transition-all duration-500 hover:pacity-80 ${icon.hoverColor}`}
+  class={`w-7 mr-2 transition-all duration-500 ${icon.hoverColor}`}
 />
