@@ -1,4 +1,4 @@
-import type { Icons } from "../components/typography/AstroIcon.astro";
+import { Icons } from "../components/typography/AstroIcon.astro";
 
 interface CodingProject {
   image: string;
@@ -11,22 +11,6 @@ interface CodingProject {
 
 const codingProjects: CodingProject[] = [
   {
-    image: "/assets/chainsprout.png",
-    stackLogos: ["next", "supabase", "tailwind", "vercel"],
-    title: "Chainsprout",
-    subTitle: "A (very) simplified version of linktree",
-    link: "https://chainsprout.vercel.app/",
-    github: "https://github.com/ehymowitz/chainsprout",
-  },
-  {
-    image: "/assets/alarmSharer.png",
-    stackLogos: ["expo", "firebase", "tailwind", "vercel"],
-    title: "Alarm Sharer",
-    subTitle: "For uploading and sharing alarm clocks",
-    link: "https://alarm-sharer.vercel.app/",
-    github: "https://github.com/ehymowitz/alarm-sharer",
-  },
-  {
     image: "/assets/portfolio.png",
     stackLogos: ["astro", "tailwind", "netlify"],
     title: "This Very Website",
@@ -38,7 +22,7 @@ const codingProjects: CodingProject[] = [
     image: "/assets/setSharer.png",
     stackLogos: ["next", "mongo", "sass", "vercel"],
     title: "Set Sharer",
-    subTitle: "For creating and sharing music sets",
+    subTitle: "[Rewriting] For creating and sharing music sets",
     link: "https://set-sharer.vercel.app/",
     github: "https://github.com/ehymowitz/set-sharer",
   },

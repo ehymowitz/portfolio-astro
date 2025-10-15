@@ -4,8 +4,9 @@ interface Props {
   link: string;
   embed?: string;
   hoverIcon?: keyof typeof Icons;
+  onClick?: string;
 }
-const { link, embed, hoverIcon } = Astro.props;
+const { link, embed, hoverIcon, onClick } = Astro.props;
 ---
 
 <a
@@ -16,7 +17,8 @@ const { link, embed, hoverIcon } = Astro.props;
         } transition-all duration-500`
       : ""
   }`}
-  target="_blank"
+  target={onClick ? null : "_blank"}
+  onclick={onClick}
   href={link}
   data-embed={embed}><slot /></a
 >

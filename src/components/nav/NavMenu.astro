@@ -28,7 +28,15 @@ const { className } = Astro.props;
   <footer
     class="sticky bottom-5 sm:bottom-0 pb-10 flex flex-cols justify-between"
   >
-    <LinkExternal link="/ElieHymowitz.pdf">CV</LinkExternal>
+    <span class="flex gap-5">
+      <LinkExternal link="#" onClick="openMultiple();">CV</LinkExternal>
+      <script is:inline>
+        function openMultiple() {
+          window.open("/ElieHymowitzBass.pdf");
+          window.open("/ElieHymowitz.pdf");
+        }
+      </script>
+    </span>
     <ul class="grid gap-x-3 sm:gap-x-5 grid-flow-col auto-cols-max">
       <LinkExternal link="https://www.instagram.com/elie.s.h/">
         <AstroIcon icon={Icons.instagram} />
