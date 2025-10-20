@@ -30,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
           <TitleSecondary>I play bass and write code</TitleSecondary>
           <TitleSecondary>Born in Seattle, based in Montreal</TitleSecondary>
         </div>
-        <div class="w-full flex justify-center">
+        <div class="w-full hidden sm:flex justify-center m-4">
           <Image
             class="rounded shadow-lg"
             src={topPhoto}
@@ -42,7 +42,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </ScrollSection>
     <ScrollSection id="music">
-      <div class="grid grid-cols-[1fr_3fr] space-between w-full">
+      <div class="grid sm:grid-cols-[1fr_3fr] space-between w-full">
         <div class="content-center">
           <LinkExternal
             hoverIcon="instagram"
@@ -87,7 +87,7 @@ import Layout from "../layouts/Layout.astro";
             <SectionText>Download my artist CV</SectionText>
           </LinkExternal>
         </div>
-        <div id="embed-slot" class="flex justify-center">
+        <div id="embed-slot" class="sm:flex justify-center hidden">
           <blockquote
             class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/p/DL77jwrMOGK/?utm_source=ig_embed&utm_campaign=loading"
